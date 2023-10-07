@@ -7,9 +7,9 @@ document.getElementById("jsCode").value = `${localStorage.getItem("jsCode")}`;
 let savedFrame =
   document.getElementById("preview-window").contentWindow.document;
 
-frame.open();
-frame.write(localStorage.getItem("result"));
-frame.close();
+savedFrame.open();
+savedFrame.write(localStorage.getItem("result"));
+savedFrame.close();
 
 function showPreview() {
   let htmlCode = document.getElementById("htmlCode").value;
